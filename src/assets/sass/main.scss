@@ -1,0 +1,831 @@
+@import "./common.scss";
+
+.Login-wrapper {
+  background: url(../img/bg.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #212832;
+  }
+
+  input {
+    height: 42px;
+    border-color: #afafaf;
+    font-size: 14px;
+    font-weight: 400;
+    color: #212832;
+  }
+
+  .login-form {
+    max-width: 450px;
+    width: 100%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px #efefef;
+    padding: 20px 30px;
+
+    h2 {
+      font-size: 35px;
+      text-align: left;
+      margin-bottom: 30px;
+      color: #2f3033;
+    }
+
+    .form-wrapper {
+      .password-label {
+        display: flex;
+        justify-content: space-between;
+
+        span.forgetpas {
+          display: inline-block;
+          width: 100%;
+          margin-top: 6px;
+          text-align: right;
+
+          .forgetpassbtn {
+            width: auto;
+            padding: 0px;
+            background: transparent !important;
+            border: none !important;
+            height: auto;
+            text-transform: capitalize;
+            font-weight: 600;
+            color: #292929;
+            margin-right: 0px;
+            margin-left: auto;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .Signup-form {
+    max-width: 450px;
+    width: 100%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px #efefef;
+    padding: 20px 30px;
+
+    h2 {
+      font-size: 35px;
+      text-align: left;
+      margin-bottom: 30px;
+      color: #2f3033;
+    }
+  }
+
+  .newaccount {
+    text-align: center;
+    color: #292929;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    font-size: 15px;
+    margin-top: 25px;
+
+    a {
+      margin-left: 3px;
+      font-size: 17px;
+      color: #212832;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  .sb-btn {
+    margin: 20px auto auto;
+    display: block;
+    min-width: 120px;
+  }
+
+  .pas-word {
+    position: relative;
+
+    .password-btn {
+      background-color: transparent !important;
+      padding: 0px;
+      border: none !important;
+      width: auto;
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      box-shadow: none;
+      height: auto;
+
+      &.notshow {
+        opacity: 0.7;
+
+        &:after {
+          content: "";
+          border-bottom: 2px solid #212832;
+          width: 25px;
+          height: 2px;
+          position: absolute;
+          top: 11px;
+          right: -1px;
+          transform: rotate(45deg);
+        }
+      }
+
+      svg {
+        font-size: 22px;
+        fill: #212832;
+      }
+    }
+  }
+}
+
+.layout-wrapper {
+  display: flex;
+  height: 100%;
+  min-height: 715px;
+
+  .sidebar-wrapper {
+    width: auto;
+
+    .sidebar {
+      margin: 0px;
+      background: #212529;
+      border: none;
+      border-radius: 0px;
+      width: 100%;
+      padding-top: 15px;
+
+      ul {
+        li {
+          a {
+            color: #b7c0cd;
+            padding-left: 15px;
+
+            span {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+
+    .sidebarmenubar {
+      height: 100%;
+
+      .sidebarmenulist {
+        height: 100%;
+
+        .pro-sidebar {
+          &.collapsed {
+            .logo-field {
+              h1 {
+                font-size: 13px !important;
+                text-align: center !important;
+              }
+            }
+          }
+
+          .pro-sidebar-inner {
+            background: #004242;
+
+            .logo-field {
+              padding-top: 20px;
+              text-align: center;
+
+              img {
+                max-width: 100px;
+                margin: auto;
+              }
+            }
+
+            .menu {
+              margin-top: 20px;
+
+              ul {
+                li {
+                  a {
+                    color: #ffffff;
+
+                    &:hover {
+                      color: #004242;
+                    }
+                  }
+
+                  div {
+                    background: #004242;
+
+                    ul {
+                      li {
+                        a {
+                          span {
+                            padding-left: 25px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .pro-sidebar-header {
+          padding: 0px 15px;
+
+          .logo-field {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+
+            h1 {
+              color: #ffffff;
+              font-size: 25px;
+              margin-bottom: 0px;
+            }
+
+            .menubarbtn {
+              background: transparent;
+              box-shadow: none;
+              border: none;
+              padding: 0px;
+
+              &:focus,
+              &:active {
+                box-shadow: none;
+              }
+            }
+          }
+        }
+
+        .pro-sidebar-content {
+          .pro-menu-item {
+            span.pro-icon-wrapper {
+              background: transparent;
+
+              .pro-icon {
+                padding: 0px;
+
+                svg {
+                  width: 25px;
+                  font-size: 25px;
+                }
+              }
+            }
+
+            .pro-item-content {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .layout-content-wrapepr {
+    width: calc(100% - 270px);
+    background: #f6f7fb;
+
+    .vald-content {
+      min-height: 580px;
+    }
+
+    .vald-content-wrappper {
+      padding: 20px 40px;
+      height: calc(100% - 50px);
+
+      .plan-wrapper {
+        margin-top: 40px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.18);
+        box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.18);
+        border: none;
+        margin-bottom: 30px;
+        background-color: #fff;
+        padding: 20px;
+
+        .plan-table-heading {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          h3 {
+            font-size: 18px;
+            margin: 0;
+          }
+
+          .search-bar {
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+
+            i {
+              &.fa-search {
+                position: absolute;
+                top: 11px;
+                left: 10px;
+                opacity: 0.2;
+              }
+            }
+
+            input {
+              width: 100%;
+              min-width: auto;
+              padding: 0 0 0 30px;
+              height: 41px;
+              border-radius: 5px;
+              background: #f9f9f9;
+            }
+          }
+
+          .addpopup-btn {
+            .btn {
+              background: #fc1f1f;
+              border-color: #fc1f1f;
+              box-shadow: none;
+            }
+          }
+        }
+
+        .plan-table {
+          table {
+            thead {
+              th {
+                background: #212529;
+                color: #ffffff;
+                border-color: #f4f5fa;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                padding: 15px 14px;
+                font-size: 15px;
+              }
+            }
+          }
+
+          .btn {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0px;
+            margin: 0px 5px;
+
+            i {
+              color: #212529;
+            }
+
+            &.user-activation {
+              background-color: #212529 !important;
+              color: #ffffff;
+              padding: 7px;
+            }
+
+            &.user-dctivation {
+              background: #0b51c5;
+              padding: 7px;
+            }
+          }
+        }
+
+        .pagination-box {
+          margin-top: 20px;
+
+          .pagination {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+
+  .layout-content-wrapepr.newClass {
+    width: calc(100% - 80px);
+  }
+}
+
+.header-bar-wrapper {
+  border-bottom: none;
+
+  .navbar-breadcrumb {
+    background: #fafafa;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 1px 7px #b7c0cd;
+
+    .navbar-links-wrapper {
+      .menubarbtn {
+        background: transparent;
+        padding: 0px;
+        border: none;
+        box-shadow: none;
+
+        svg {
+          width: 35px;
+          font-size: 35px;
+          fill: #004242;
+        }
+      }
+    }
+
+    .navbar-menu-wrapper {
+      .btn {
+        background: #004242;
+        border: 1px solid #004242;
+        box-shadow: none;
+
+        &:focus {
+          background: #004242;
+          border: 1px solid #004242;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .logo-field {
+    h1 {
+      font-size: 20px;
+      color: #ffffff;
+    }
+  }
+}
+
+.footer {
+  border-top: 1px solid #f4f5fa;
+  padding: 15px;
+  transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  font-size: calc(0.875rem - 0.05rem);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+
+  a {
+    color: #fc1f1f;
+    font-size: inherit;
+  }
+}
+
+.add-token-wrapper {
+  .token-form {
+    .form-label {
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
+
+.token-wrappr {
+  padding: 40px 20px;
+
+  .token-btn {
+    text-align: right;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      margin-bottom: 0px;
+      color: #212832;
+      font-size: 26px;
+      font-weight: 600;
+    }
+  }
+
+  .token-list {
+    table {
+      tr {
+        th {
+          color: #004242;
+          font-size: 15px;
+
+          &:first-child {
+            width: 70px;
+          }
+        }
+
+        td {
+          color: #212832;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.message-list-wrapper {
+  padding: 40px 20px;
+
+  .message-heading {
+    text-align: right;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      margin-bottom: 0px;
+      color: #212832;
+      font-size: 26px;
+      font-weight: 600;
+    }
+  }
+
+  .message-list-box {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    .ms-list {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .card {
+        margin: 10px;
+        width: 31.3%;
+        box-shadow: 0px 0px 5px #e5e5e5;
+        @media (max-width: 1280px) {
+          width: 47.5%;
+          margin: 8px;
+        }
+      }
+    }
+  }
+}
+
+.selecttime-field {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  border-radius: 6px;
+
+  input {
+    border: none;
+    border-radius: 6px;
+  }
+
+  .react-datepicker-wrapper {
+    input {
+      width: 100%;
+      height: 40px;
+      padding: 10px 15px;
+      font-size: 15px;
+    }
+  }
+}
+
+.selecttime-field {
+  .react-datepicker-popper {
+    width: 100%;
+  }
+
+  .react-datepicker {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 20px;
+    position: relative;
+    max-width: 463px;
+
+    @media (max-width: 450px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .react-datepicker__navigation {
+      position: absolute;
+      top: 22px;
+
+      span {
+        &::before {
+          border-width: 2px 2px 0 0;
+          border-color: #000000;
+        }
+      }
+
+      &.react-datepicker__navigation--previous {
+        left: 10px;
+      }
+
+      &.react-datepicker__navigation--next {
+        right: 105px;
+      }
+    }
+
+    .react-datepicker__month-container {
+      width: calc(100% - 85px);
+
+      .react-datepicker__header {
+        background-color: transparent;
+        border: none;
+        padding-top: 0px;
+
+        .react-datepicker__current-month {
+          text-align: center;
+          margin-bottom: 10px;
+          padding-left: 0px;
+          font-size: 17px;
+          font-family: "Nunito", sans-serif;
+          line-height: 25px;
+          color: #000000;
+          font-weight: 600;
+        }
+
+        .react-datepicker__day-names {
+          border: 1px solid #e1e1e1;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          div {
+            font-size: 14px;
+            line-height: 25px;
+            color: #000000;
+            font-weight: 700;
+            width: 14.5%;
+            padding: 4px;
+            border-left: 1px solid #e1e1e1;
+            margin: 0px;
+            text-transform: uppercase;
+            font-family: "Nunito", sans-serif;
+
+            @media (max-width: 450px) {
+              font-size: 14px;
+            }
+
+            &:first-child {
+              border: none;
+            }
+          }
+        }
+      }
+
+      .react-datepicker__month {
+        margin: 0px;
+
+        .react-datepicker__week {
+          margin: 0px;
+          border-bottom: 1px solid #e1e1e1;
+          border-left: 1px solid #e1e1e1;
+          border-right: 1px solid #e1e1e1;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .react-datepicker__day {
+            font-size: 14px;
+            line-height: 25px;
+            color: #000000;
+            font-weight: 500;
+            width: 14.5%;
+            margin: 0px;
+            border-left: 1px solid #e1e1e1;
+            border-radius: 0px;
+            padding: 4px;
+            font-family: "Nunito", sans-serif;
+            cursor: pointer;
+
+            @media (max-width: 450px) {
+              font-size: 14px;
+            }
+
+            &:first-child {
+              border: none;
+            }
+
+            &.react-datepicker__day--selected {
+              background-color: #004242;
+              color: #ffffff;
+            }
+
+            &.react-datepicker__day--keyboard-selected {
+              background-color: #004242;
+              color: #ffffff;
+            }
+
+            &:hover {
+              background-color: #004242;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+
+    .react-datepicker__time-container {
+      border: none;
+      margin-top: -2px;
+
+      .react-datepicker__header {
+        border-bottom: 1px solid #e1e1e1;
+      }
+
+      .react-datepicker-time__header {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .react-datepicker__time {
+        .react-datepicker__time-box {
+          border-right: 1px solid #e1e1e1;
+          border-bottom: 1px solid #e1e1e1;
+
+          ul.react-datepicker__time-list {
+          }
+        }
+      }
+    }
+  }
+}
+
+ul.react-datepicker__time-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+ul.react-datepicker__time-list::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+ul.react-datepicker__time-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(166, 176, 195);
+}
+
+.message-box {
+  p {
+    font-size: 16px;
+    color: #212832;
+    margin-bottom: 10px;
+  }
+
+  .message-date {
+    display: flex;
+    justify-content: space-between;
+
+    .date-field {
+      label {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .Date {
+        font-size: 14px;
+        color: #212832;
+      }
+    }
+  }
+
+  .message-created {
+    margin-top: 12px;
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+.loader {
+  text-align: center;
+  div {
+    width: 48px;
+    height: 48px;
+    border: 5px solid rgb(0, 0, 0);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
